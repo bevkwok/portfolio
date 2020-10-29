@@ -1,0 +1,34 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+dark blue: #112d4e
+blue: #3f72af
+lighter blue: #a6b1e1
+light blue: #dbe2ef
+light grey: #f9f7f7
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* so the padding and border nolong added to the total height or width of the box */
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #222222;
+} 
+
+.header {
+    height: 95vh;  /* always 95% height */
+    background-image: url(../img/ilya-pavlov-OqtafYT5kTw-unsplash.jpg);
+    background-size: cover;  /* always fit the element inside the box */
+    background-position: top;  /* background imgs always at the top */
+}
