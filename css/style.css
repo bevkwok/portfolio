@@ -16,19 +16,81 @@ light grey: #f9f7f7
     margin: 0;
     padding: 0;
     box-sizing: border-box;  /* so the padding and border nolong added to the total height or width of the box */
+    /* border: solid red 1px; */
 }
 
 body{
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+    /* font-weight: 300; */
     font-size: 16px;
     line-height: 1.8;
     color: #222222;
+    padding: 0px 25px;
+    background-color: #f9f7f7;
 } 
 
 .header {
-    height: 95vh;  /* always 95% height */
-    background-image: url(../img/ilya-pavlov-OqtafYT5kTw-unsplash.jpg);
+    height: 80vh;  /* always 95% height */
+    background-image: linear-gradient(
+        #112d4eda, #5282bdde), 
+        url(../img/ilya-pavlov-OqtafYT5kTw-unsplash.jpg);
     background-size: cover;  /* always fit the element inside the box */
     background-position: top;  /* background imgs always at the top */
+
+    /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%,  50% 88%, 0% 100%);
+}
+
+#myIcon{
+    width: 150px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    position: absolute;
+    top: 32vh;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* element starting point shift to the middle */
+    border: 4px solid #a6b1e1;
+    padding: 2px;
+}
+
+.heading-top{
+    color: white;
+    width: 100%;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* element starting point shift to the middle */
+}
+
+.heading-top-big{
+    display: block;
+    font-size: 5vw;
+    letter-spacing: 3px;
+    text-align: center;
+
+    animation-name: wordSpaceOut;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+}
+
+.heading-top-sml{
+    display: block;
+    font-size: 2vw;
+    letter-spacing: 5px;
+    text-align: center;
+    /* font-family: 'Inconsolata', monospace; */
+}
+
+@keyframes wordSpaceOut {
+    0%{
+        opacity: 0;
+        letter-spacing: 5vw;
+    }
+
+    100%{
+        opacity: 1;
+        letter-spacing: 3px;
+    }
 }
