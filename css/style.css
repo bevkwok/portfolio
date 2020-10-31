@@ -94,3 +94,79 @@ body{
         letter-spacing: 3px;
     }
 }
+
+@keyframes moveInButton {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link,   /* before click */
+.btn:visited   /* after click */ {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    display: inline-block;
+    /* border-radius: 100px; */
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    
+    /* 10px down 20px blur*/
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.btn-white {
+    background-color: white;
+    color: #3f72af;
+}
+
+.btn:after {
+    content: ""; 
+    display: inline-block; /* have to state the content and display property for it to show up */
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white:after {
+    background-color: white;
+}
+
+.btn:hover::after {
+    /* after hover */
+    transform: scaleX(1.2) scaleY(1.7);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;  /* starts at 0% animation */
+}
+
+.btn-icon:after {
+    
+}
+
+.btn-icon:hover::after {
+
+}
