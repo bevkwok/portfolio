@@ -1,0 +1,191 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+dark blue: #112d4e
+blue: #3f72af
+lighter blue: #a6b1e1
+light blue: #dbe2ef
+light grey: #f9f7f7
+*/
+
+$color-primary: #3f72af;
+$color-primary-light: #a6b1e1;
+$color-primary-dark: #112d4e;
+
+$color-grey-dark: #222222;
+$color-grey-light: #f9f7f7;
+
+$color-white: #fff;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;  /* force inheritance */
+}
+
+html {
+    font-size: 62.5%;
+    /* using % instead of px so user can change it */
+    /* font-size: 10px;    */
+    /* make 1 rem = 10px, rem is the root font-size */
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    /* font-size: 16px; */
+    line-height: 1.8;
+    color: $color-grey-dark;
+    padding: 0px 2.5rem;
+    background-color: $color-grey-light;
+    box-sizing: border-box;  /* so the padding and border nolong added to the total height or width of the box */
+    /* border: solid red 1px; */
+} 
+
+.header {
+    height: 80vh;  /* always 95% height */
+    background-image: linear-gradient(
+        rgba($color-primary-dark, 0.8), rgba($color-primary-light, 0.8)), 
+        url(../img/ilya-pavlov-OqtafYT5kTw-unsplash.jpg);
+    background-size: cover;  /* always fit the element inside the box */
+    background-position: top;  /* background imgs always at the top */
+
+    /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%,  50% 88%, 0% 100%);
+}
+
+#myIcon{
+    width: 15rem;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    position: absolute;
+    top: 32vh;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* element starting point shift to the middle */
+    border: 0.4rem solid $color-primary-light;
+    padding: 2px;
+}
+
+.heading-top{
+    color: $color-white;
+    width: 100%;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* element starting point shift to the middle */
+}
+
+.heading-top--big{
+    display: block;
+    font-size: 5vw;
+    letter-spacing: 3px;
+    text-align: center;
+
+    animation-name: wordSpaceOut;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+}
+
+.heading-top--sml{
+    display: block;
+    font-size: 2vw;
+    letter-spacing: 5px;
+    text-align: center;
+    /* font-family: 'Inconsolata', monospace; */
+}
+
+@keyframes wordSpaceOut {
+    0%{
+        opacity: 0;
+        letter-spacing: 5vw;
+    }
+
+    100%{
+        opacity: 1;
+        letter-spacing: 3px;
+    }
+}
+
+@keyframes moveInButton {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link,   /* before click */
+
+.btn:visited   /* after click */ {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    /* border-radius: 100px; */
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    
+    /* 10px down 20px blur*/
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .2);
+}
+
+.btn--white {
+    background-color: $color-white;
+    color: $color-primary;
+}
+
+.btn:after {
+    content: ""; 
+    display: inline-block; /* have to state the content and display property for it to show up */
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn--white:after {
+    background-color: $color-white;
+}
+
+.btn:hover::after {
+    /* after hover */
+    transform: scaleX(1.2) scaleY(1.7);
+    opacity: 0;
+}
+
+.btn--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;  /* starts at 0% animation */
+}
+
+.header__icon:after {
+    
+}
+
+.header__icon:hover::after {
+
+}
