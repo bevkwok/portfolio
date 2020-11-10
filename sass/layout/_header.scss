@@ -1,0 +1,12 @@
+.header {
+    height: 80vh;  /* always 95% height */
+    background-image: linear-gradient(
+        rgba($color-primary-dark, 0.8), rgba($color-primary-light, 0.8)), 
+        url(../img/ilya-pavlov-OqtafYT5kTw-unsplash.jpg);
+    background-size: cover;  /* always fit the element inside the box */
+    background-position: top;  /* background imgs always at the top */
+
+    /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%,  50% 88%, 0% 100%);
+}
+

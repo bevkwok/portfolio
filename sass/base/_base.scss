@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;  /* force inheritance */
+}
+
+html {
+    font-size: 62.5%; // = 10px
+    /* using % instead of px so user can change it */
+}
+
+body{
+    padding: 0px 2.5rem;
+    background-color: $color-grey-light;
+    box-sizing: border-box;  
+    /* so the padding and border nolong added to the total height or width of the box */
+    /* border: solid red 1px; */
+} 

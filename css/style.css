@@ -1,16 +1,28 @@
 /*
 COLORS:
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
 dark blue: #112d4e
 blue: #3f72af
 lighter blue: #a6b1e1
 light blue: #dbe2ef
 light grey: #f9f7f7
 */
+@keyframes wordSpaceOut {
+  0% {
+    opacity: 0;
+    letter-spacing: 5vw; }
+  100% {
+    opacity: 1;
+    letter-spacing: 0.8vw; } }
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 *,
 *::after,
 *::before {
@@ -21,31 +33,89 @@ light grey: #f9f7f7
 
 html {
   font-size: 62.5%;
-  /* using % instead of px so user can change it */
-  /* font-size: 10px;    */
-  /* make 1 rem = 10px, rem is the root font-size */ }
+  /* using % instead of px so user can change it */ }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  /* font-size: 16px; */
-  line-height: 1.8;
-  color: #222222;
   padding: 0px 2.5rem;
   background-color: #f9f7f7;
   box-sizing: border-box;
   /* so the padding and border nolong added to the total height or width of the box */
   /* border: solid red 1px; */ }
 
-.header {
-  height: 80vh;
-  /* always 95% height */
-  background-image: linear-gradient(rgba(17, 45, 78, 0.8), rgba(166, 177, 225, 0.8)), url(../img/ilya-pavlov-OqtafYT5kTw-unsplash.jpg);
-  background-size: cover;
-  /* always fit the element inside the box */
-  background-position: top;
-  /* background imgs always at the top */
-  /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 88%, 0% 100%); }
+body {
+  /* font-size: 16px; */
+  line-height: 1.8;
+  color: #222222; }
+
+.heading-top {
+  color: #fff;
+  width: 100%;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* element starting point shift to the middle */ }
+  .heading-top--big {
+    display: block;
+    text-align: center;
+    font-size: 5vw;
+    letter-spacing: 0.8vw;
+    animation-name: wordSpaceOut;
+    animation-duration: 4s;
+    animation-timing-function: ease-out; }
+  .heading-top--sml {
+    display: block;
+    text-align: center;
+    font-size: 2vw;
+    letter-spacing: 6px;
+    /* font-family: 'Inconsolata', monospace; */ }
+
+.btn:link, .btn:visited {
+  /* after click */
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 3rem;
+  display: inline-block;
+  transition: all .2s;
+  position: relative; }
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    /* after hover */
+    transform: scaleX(1.2) scaleY(1.7);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  background-color: #fff;
+  color: #3f72af; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  /* have to state the content and display property for it to show up */
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn--animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+  /* starts at 0% animation */ }
 
 #myIcon {
   width: 15rem;
@@ -59,94 +129,53 @@ body {
   border: 0.4rem solid #a6b1e1;
   padding: 2px; }
 
-.heading-top {
-  color: white;
-  width: 100%;
-  font-weight: 400;
-  text-transform: uppercase;
+.header {
+  height: 80vh;
+  /* always 95% height */
+  background-image: linear-gradient(rgba(17, 45, 78, 0.8), rgba(166, 177, 225, 0.8)), url(../img/ilya-pavlov-OqtafYT5kTw-unsplash.jpg);
+  background-size: cover;
+  /* always fit the element inside the box */
+  background-position: top;
+  /* background imgs always at the top */
+  /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 88%, 0% 100%); }
+
+.row {
+  max-width: 114rem;
+  background-color: #a6b1e1;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: aquamarine;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 6rem * 2) / 3); }
+  .row .col-2-of-3 {
+    width: calc(((100% - 6rem * 2) / 3) * 2 + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 6rem * 3) / 4); }
+  .row .col-2-of-4 {
+    width: calc(((100% - 6rem * 3) / 4) * 2 + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(((100% - 6rem * 3) / 4) * 3 + (6rem * 2)); }
+
+#myIcon {
+  width: 15rem;
+  border-radius: 50%;
+  filter: grayscale(100%);
   position: absolute;
-  top: 55%;
+  top: 32vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* element starting point shift to the middle */ }
-
-.heading-top--big {
-  display: block;
-  font-size: 5vw;
-  letter-spacing: 3px;
-  text-align: center;
-  animation-name: wordSpaceOut;
-  animation-duration: 4s;
-  animation-timing-function: ease-out; }
-
-.heading-top--sml {
-  display: block;
-  font-size: 2vw;
-  letter-spacing: 5px;
-  text-align: center;
-  /* font-family: 'Inconsolata', monospace; */ }
-
-@keyframes wordSpaceOut {
-  0% {
-    opacity: 0;
-    letter-spacing: 5vw; }
-  100% {
-    opacity: 1;
-    letter-spacing: 3px; } }
-
-@keyframes moveInButton {
-  0% {
-    opacity: 0;
-    transform: translateY(30px); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 3rem;
-  display: inline-block;
-  /* border-radius: 100px; */
-  transition: all .2s;
-  position: relative; }
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  /* 10px down 20px blur*/ }
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.btn--white {
-  background-color: white;
-  color: #3f72af; }
-
-.btn:after {
-  content: "";
-  display: inline-block;
-  /* have to state the content and display property for it to show up */
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s; }
-
-.btn--white:after {
-  background-color: white; }
-
-.btn:hover::after {
-  /* after hover */
-  transform: scaleX(1.2) scaleY(1.7);
-  opacity: 0; }
-
-.btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards;
-  /* starts at 0% animation */ }
+  /* element starting point shift to the middle */
+  border: 0.4rem solid #a6b1e1;
+  padding: 2px; }

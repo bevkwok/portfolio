@@ -1,0 +1,53 @@
+.btn{
+    &:link,   /* before click */
+
+    &:visited {  /* after click */ 
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        display: inline-block;
+        transition: all .2s;
+        position: relative;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+        &::after {  /* after hover */
+            transform: scaleX(1.2) scaleY(1.7);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, .2);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-primary;
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &::after {
+        content: ""; 
+        display: inline-block; /* have to state the content and display property for it to show up */
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;  /* starts at 0% animation */
+    }
+}
