@@ -1,15 +1,21 @@
 .header__icon-box {
-    
+    display: block;
+
 }
 
-#myIcon{
+
+#myIcon2{
     width: 15rem;
     border-radius: 50%;
-    filter: grayscale(100%);
-    position: absolute;
-    top: 32vh;
+
+    position: relative;
     left: 50%;
-    transform: translate(-50%, -50%);  /* element starting point shift to the middle */
+    transform: translate(-50%, -0%);  /* element starting point shift to the middle */
     border: 0.4rem solid $color-primary-light;
     padding: 2px;
+    filter: grayscale(100%);
+
+    &:hover{
+    filter: grayscale(30%);
+    }
 }

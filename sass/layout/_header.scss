@@ -1,7 +1,8 @@
 .header {
-    height: 80vh;  /* always 95% height */
+    height: 85vh;  /* always 95% height */
     background-image: linear-gradient(
-        rgba($color-primary-dark, 0.8), rgba($color-primary-light, 0.8)), 
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)), 
         url(../img/ilya-pavlov-OqtafYT5kTw-unsplash.jpg);
     background-size: cover;  /* always fit the element inside the box */
     background-position: top;  /* background imgs always at the top */
