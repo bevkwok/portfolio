@@ -10,10 +10,10 @@ light grey: #f9f7f7
 @keyframes wordSpaceOut {
   0% {
     opacity: 0;
-    letter-spacing: 5vw; }
+    letter-spacing: 0vw; }
   100% {
     opacity: 1;
-    letter-spacing: 0.8vw; } }
+    letter-spacing: 1vw; } }
 
 @keyframes moveInButton {
   0% {
@@ -37,7 +37,7 @@ html {
 
 body {
   padding: 0px 2.5rem;
-  background-color: #f9f7f7;
+  background-color: #f5f5f5;
   box-sizing: border-box;
   /* so the padding and border nolong added to the total height or width of the box */
   /* border: solid red 1px; */ }
@@ -60,7 +60,7 @@ body {
     display: block;
     text-align: center;
     font-size: 6.5rem;
-    letter-spacing: 0.8vw;
+    letter-spacing: 1vw;
     animation-name: wordSpaceOut;
     animation-duration: 4s;
     animation-timing-function: ease-out;
@@ -83,7 +83,7 @@ body {
   display: inline-block;
   -webkit-background-clip: text;
   color: rgba(0, 0, 0, 0.1);
-  letter-spacing: 3px;
+  letter-spacing: 0.5rem;
   transition: all .2s; }
   .heading-secondary:hover {
     letter-spacing: 1rem; }
@@ -100,13 +100,39 @@ body {
   text-align: center; }
 
 .u-margin-bottom-big {
-  margin-bottom: 6rem; }
+  margin-bottom: 9rem; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 3.5rem; }
+  margin-bottom: 5rem; }
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
+
+.composition {
+  display: flex;
+  justify-content: space-evenly; }
+  .composition__icon {
+    font-size: 9rem;
+    color: #112d4e;
+    background-image: linear-gradient(to left, #a6b1e1, #f5f5f5);
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.99);
+    border-radius: 1rem;
+    z-index: 10;
+    transition: all .2s;
+    text-shadow: 0 0.5rem 1rem rgba(166, 177, 225, 0.4);
+    outline-offset: 1rem; }
+    .composition__icon--i1 {
+      padding: 1rem 2.2rem; }
+    .composition__icon--i2 {
+      padding: 1rem; }
+    .composition__icon--i3 {
+      padding: 1rem 1.5rem; }
+    .composition__icon:hover {
+      outline: 1rem solid #f5f5f5;
+      transform: scale(1.05);
+      box-shadow: 0 0.5rem 1rem rgba(17, 45, 78, 0.4);
+      z-index: 20; }
 
 .btn:link, .btn:visited {
   /* after click */
@@ -209,16 +235,5 @@ body {
 .section-about {
   background-color: #fff;
   padding: 15rem 0;
-  margin-top: -10vh; }
-
-#myIcon {
-  width: 15rem;
-  border-radius: 50%;
-  filter: grayscale(100%);
-  position: absolute;
-  top: 32vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* element starting point shift to the middle */
-  border: 0.4rem solid #a6b1e1;
-  padding: 2px; }
+  margin-top: -10vh;
+  clip-path: polygon(50% 0%, 100% 12%, 100% 88%, 50% 100%, 0% 88%, 0% 12%); }

@@ -1,0 +1,39 @@
+.composition {
+    display: flex;
+    justify-content: space-evenly;
+    
+    &__icon{
+        font-size: 9rem;
+        color: $color-primary-dark;
+        // position: absolute;
+        background-image: linear-gradient(to left, $color-primary-light, $color-grey-light);
+        display: inline-block;
+        color: rgba(255, 255, 255, 0.99);
+        border-radius: 1rem;
+        z-index: 10;
+        transition: all .2s;
+        text-shadow: 0 0.5rem 1rem rgba($color-primary-light, .4);
+        outline-offset: 1rem;
+
+        &--i1 {
+            padding: 1rem 2.2rem;
+        }
+
+        &--i2 {
+            padding: 1rem;
+
+        }
+
+        &--i3 {
+            padding: 1rem 1.5rem;
+        }
+
+        &:hover {
+            outline: 1rem solid $color-grey-light;
+            transform: scale(1.05);
+            box-shadow: 0 0.5rem 1rem rgba($color-primary-dark, .4);
+            z-index: 20;
+        }
+
+    }
+}

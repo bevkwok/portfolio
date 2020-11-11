@@ -7,6 +7,7 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/composition";
 @import "components/button";
 @import "components/myicon";
 
@@ -15,15 +16,3 @@
 
 
 @import "pages/home";
-
-#myIcon{
-    width: 15rem;
-    border-radius: 50%;
-    filter: grayscale(100%);
-    position: absolute;
-    top: 32vh;
-    left: 50%;
-    transform: translate(-50%, -50%);  /* element starting point shift to the middle */
-    border: 0.4rem solid $color-primary-light;
-    padding: 2px;
-}
