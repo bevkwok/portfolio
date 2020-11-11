@@ -1,6 +1,5 @@
 .row{
     max-width: $grid-width;
-    background-color: $color-primary-light;
     margin: 0 auto;
 
     &:not(:last-child) { // selected eveything but last-child
@@ -10,7 +9,6 @@
     @include clearfix;
 
     [class^="col-"] {// ^ means begins with 
-        background-color: aquamarine;
         float: left; // float element has 0 px height
 
         &:not(:last-child) {
