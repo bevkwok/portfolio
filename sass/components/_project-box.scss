@@ -1,0 +1,34 @@
+
+
+.project-box {
+    background-color: rgba($color-white, .85);
+    font-size: 2.3rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 3rem rgba($color-black, 0.25);
+    transition: transform .5s;
+    height: 35rem;
+    display: inline-block;
+
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: .5rem;
+    }
+
+    &:hover {
+        transform: translateY(1.0rem) scale(1.04);
+    }
+
+    &__text{
+        font-size: 1.6rem;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-box{
+        display: inline-block;
+        width: 100%;
+    }
+}

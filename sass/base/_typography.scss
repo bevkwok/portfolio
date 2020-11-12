@@ -19,7 +19,7 @@ body{
         display: block;
         text-align: center;
         font-size: 6.5rem;
-        letter-spacing: 0.8vw;   
+        letter-spacing: 1vw;   
         animation-name: wordSpaceOut;
         animation-duration: 4s;
         animation-timing-function: ease-out;
@@ -48,7 +48,7 @@ body{
     display: inline-block;
     -webkit-background-clip: text;
     color: rgba(0, 0, 0, 0.1);
-    letter-spacing: 3px;
+    letter-spacing: 0.5rem;
     transition: all .2s;
 
     &:hover {
