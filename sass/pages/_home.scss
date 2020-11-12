@@ -1,6 +1,18 @@
 .section-about {
     background-color: $color-white;
-    padding: 15rem 0;
+    padding: 15rem 3rem;
     margin-top: -10vh;
     clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
+}
+
+.section-projects {
+    padding: 15rem 2rem;
+    background-image: linear-gradient(
+        rgba($color-primary-light, 0.9),
+        rgba($color-primary-dark, 0.9)), 
+        url(../img/mesh-X0z-meKcGAE-unsplash.jpg);
+    background-size: cover; 
+
+
+    
 }
