@@ -1,5 +1,5 @@
 .header {
-    height: 85vh;  /* always 95% height */
+    height: 90vh;  /* always 95% height */
     background-image: linear-gradient(
         rgba($color-primary-light, 0.8),
         rgba($color-primary-dark, 0.8)), 
@@ -7,7 +7,9 @@
     background-size: cover;  /* always fit the element inside the box */
     background-position: top;  /* background imgs always at the top */
 
-    /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%,  50% 88%, 0% 100%);
+    // clip-path: polygon(0% 0%, 100% 0%, 100% 100%,  50% 88%, 0% 100%);
+
+    -webkit-clip-path: polygon(100% 0, 100% 88%, 50% 100%, 0 88%, 0 0);
+    clip-path: polygon(100% 0, 100% 88%, 50% 100%, 0 88%, 0 0);
 }
 

@@ -1,0 +1,103 @@
+.card {
+    perspective: 180rem;
+    -moz-perspective: 180rem;
+    position: relative;
+    height: 52rem;
+    
+
+    &__side {
+        // background-image: linear-gradient($color-primary-light, $color-white);
+        background-color: $color-black;
+        height: 52rem;
+        transition: all 1s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 2px;
+        box-shadow: 0 1rem 4rem rgba($color-black, 0.35);
+
+        &--front {
+            // background-image: linear-gradient($color-primary-light, $color-white);
+            background-color: $color-grey-light;
+        }
+
+        &--back {
+            // background-image: linear-gradient($color-black, $color-primary-dark);
+            background-color: $color-primary-dark;
+            transform: rotateY(180deg);
+        }
+    }
+
+    &:hover &__side--front { //.card:hover .card__side--front 
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back { //.card:hover .card__side--back
+        transform: rotateY(0deg);
+    }
+
+    //FRONT SIDE
+
+    &__picture {
+        background-size: cover;
+        height: 22rem;
+
+        &--1 {
+            background-image: url(../img/foodbank.png);
+        }
+
+        &--2 {
+            background-image: url(../img/uapplied.png);
+        }
+
+        &--3 {
+            background-image: url(../img/foodbank.png);
+        }
+    }
+
+    &__heading {
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: $color-grey-light;
+        position: absolute;
+        top: 20rem;
+        right: 0rem;
+        text-align: right;
+    }
+
+    &__heading-span {
+        background-image: linear-gradient(to right bottom, rgba($color-primary-dark, .85), rgba($color-primary-light, .85));
+        padding: 0.5rem 1.5rem;
+    }
+
+    &__details {
+        padding: 3rem;
+        
+        &--main {
+            text-align: center;
+            font-size: 1.4rem;
+            color: rgba($color-primary-dark, .75);
+            padding: 2rem 0.5rem;
+        }
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.8rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgb(202, 202, 202);
+                }
+            }
+        }
+
+    }
+}
+

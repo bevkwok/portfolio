@@ -2,7 +2,10 @@
     background-color: $color-white;
     padding: 15rem 3rem;
     margin-top: -10vh;
+    -webkit-clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
     clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
+
+    // clip-path: polygon(0 0, 50% 8%, 100% 0, 100% 100%, 50% 88%, 0 100%);
 }
 
 .section-projects {
@@ -13,6 +16,16 @@
         url(../img/mesh-X0z-meKcGAE-unsplash.jpg);
     background-size: cover; 
 
+}
 
-    
+
+.section-project {
+    background-image: linear-gradient(
+        rgba($color-primary-dark, 0.8), rgba($color-primary-light, 0.8)), 
+        url(../img/mesh-X0z-meKcGAE-unsplash.jpg);
+    background-size: cover; 
+    padding: 15rem 3rem;
+    margin-top: -10vh;
+    -webkit-clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
+    clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
 }
