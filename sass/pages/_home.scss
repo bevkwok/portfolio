@@ -1,6 +1,7 @@
-.section-about {
+.section-about,
+.section-skills {
     background-color: $color-white;
-    padding: 15rem 3rem;
+    padding: 20rem 5rem;
     margin-top: -10vh;
     -webkit-clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
     clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
@@ -9,7 +10,7 @@
 }
 
 .section-projects {
-    padding: 15rem 2rem;
+    padding: 20rem 2rem;
     background-image: linear-gradient(
         rgba($color-primary-light, 0.9),
         rgba($color-primary-dark, 0.9)), 
@@ -24,8 +25,44 @@
         rgba($color-primary-dark, 0.8), rgba($color-primary-light, 0.8)), 
         url(../img/mesh-X0z-meKcGAE-unsplash.jpg);
     background-size: cover; 
-    padding: 15rem 3rem;
+    padding: 20rem 3rem;
     margin-top: -10vh;
     -webkit-clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
     clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
 }
+
+.section-contact-icon {
+    background-color: $color-primary-dark;
+    padding: 10rem 6rem;
+    margin-top: -5vh;
+    -webkit-clip-path: polygon(50% 0%, 100% 12%, 100% 100%, 0 100%, 0 12%);
+    clip-path: polygon(50% 0%, 100% 12%, 100% 100%, 0 100%, 0 12%);
+}
+
+.section-copyright {
+    background-color: $color-primary-dark;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: -1vh;
+}
+
+.section-contact {
+    background-color: $color-white;
+    padding: 15rem 6rem;
+    margin-top: -10vh;
+    -webkit-clip-path: polygon(50% 0%, 100% 12%, 100% 100%, 0 100%, 0 12%);
+    clip-path: polygon(50% 0%, 100% 12%, 100% 100%, 0 100%, 0 12%);
+}
+
+.contact {
+    margin: 10rem;
+    // background-color: $color-primary-dark;
+    background-image: linear-gradient(to top, rgba($color-primary-light, 0.2), $color-white);
+    border-radius: 3px;
+    // border: 10px solid rgba($color-primary-light, 0.8);
+    box-shadow: 0 1rem 2.5rem rgba($color-primary-dark, 0.05);
+    outline-offset: 2rem;
+    padding: 3rem 5rem;
+}
+
