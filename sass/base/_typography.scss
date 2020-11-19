@@ -9,7 +9,7 @@ body{
 .heading-top{
     color: $color-white;
     width: 100%;
-    font-weight: 600;
+    font-weight: 200;
     text-transform: uppercase;
     position: absolute;
     top: 43%;
@@ -19,7 +19,7 @@ body{
     &--big{
         display: block;
         text-align: center;
-        font-size: 6.5rem;
+        font-size: 7rem;
         letter-spacing: 1vw;   
         animation-name: wordSpaceOut;
         animation-duration: 4s;

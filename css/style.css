@@ -51,7 +51,7 @@ body {
 .heading-top {
   color: #fff;
   width: 100%;
-  font-weight: 600;
+  font-weight: 200;
   text-transform: uppercase;
   position: absolute;
   top: 43%;
@@ -61,7 +61,7 @@ body {
   .heading-top--big {
     display: block;
     text-align: center;
-    font-size: 6.5rem;
+    font-size: 7rem;
     letter-spacing: 1vw;
     animation-name: wordSpaceOut;
     animation-duration: 4s;
@@ -372,6 +372,70 @@ body {
     width: calc(((100% - 5rem * 3) / 4) * 2 + 5rem); }
   .row .col-3-of-4 {
     width: calc(((100% - 5rem * 3) / 4) * 3 + (5rem * 2)); }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #fff;
+  height: 6.5rem;
+  width: 6.5rem;
+  position: fixed;
+  top: 5rem;
+  right: 7rem;
+  border-radius: 50%;
+  z-index: 2000; }
+
+.navigation__background {
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5.5rem;
+  right: 7.5rem;
+  background-image: radial-gradient(#a6b1e1, #112d4e);
+  z-index: 1000;
+  transform: scale(40);
+  opacity: 0.95; }
+
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500; }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -50%);
+  list-style: none; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 200;
+  padding: 0.3rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 240%;
+  transition: all .8s; }
+  .navigation__link:link span, .navigation__link:visited span {
+    margin-right: 2rem;
+    font-size: 2rem;
+    display: inline-block; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #a6b1e1;
+  transform: translateX(0.8rem); }
 
 .section-about,
 .section-skills {
