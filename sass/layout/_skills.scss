@@ -1,0 +1,28 @@
+.section-skills{
+    h3 {
+        letter-spacing: 1rem;
+        position: relative;
+        padding-bottom: 2px;
+    }
+
+    h3::after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 10%;
+        height: 1.5px;
+        width: 80%;
+        background-image: linear-gradient(to left, transparent 0%, rgba($color-primary-dark, .85), transparent 100%);
+    }
+
+    i {
+        display: inline-block;
+        font-size: 6rem;
+        color: $color-primary-dark;
+        padding: 3rem 1.5rem;
+    }
+
+    i:hover {
+        color: $color-primary-light;
+    }
+}

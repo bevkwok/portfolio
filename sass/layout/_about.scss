@@ -1,0 +1,18 @@
+* {
+    // border: 1px solid red;
+}
+
+.section-about-content {
+    padding: 0rem 2rem;
+}
+.section-about-paragraph {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-image {
+        font-size: 6rem;
+        color: $color-primary-dark;
+        padding: 2rem;
+    }
+}

@@ -1,10 +1,13 @@
+* {
+    // border: 1px solid red;
+}
+
 .card {
     perspective: 180rem;
     -moz-perspective: 180rem;
     position: relative;
     height: 52rem;
     
-
     &__side {
         // background-image: linear-gradient($color-primary-light, $color-white);
         background-color: $color-black;
@@ -104,13 +107,23 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-53%, -35%);
+        transform: translate(-50%, -45%);
+        width: 100%;
+        padding: 1.5rem;
     }
 
     &__des-box {
         text-align: center;
         color: $color-white;
         margin-bottom: 8rem;
+    }
+
+    &__des-btn {
+        padding: 0rem 3rem;
+
+        a {
+            border-radius: 2px;
+        }
     }
 
     &__des {
