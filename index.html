@@ -19,23 +19,23 @@
         <div class="navigation">
             <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
-            <label for="navi-toggle" class="navigation__button">Menu</label>
+            <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
 
             <div class="navigation__background">&nbsp;</div>
 
             <nav class="navigation__nav">
                 <ul class="navigation__list">
                     <li class="navigation__item">
-                        <a href="#" class="navigation__link">  <span>01</span>About Me</a>
+                        <a href="#section-about" class="navigation__link">  <span>01</span>About Me</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="#" class="navigation__link"> <span>02</span>Projects</a>
+                        <a href="#section-project" class="navigation__link"> <span>02</span>Projects</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="#" class="navigation__link"> <span>03</span>Skills</a>
+                        <a href="#section-skills" class="navigation__link"> <span>03</span>Skills</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="#" class="navigation__link"> <span>04</span>Contact & Info</a>
+                        <a href="#section-contact-icon" class="navigation__link"> <span>04</span>Contact & Info</a>
                     </li>
                 </ul>
             </nav>
@@ -56,18 +56,42 @@
         </header>
 
         <main>
-            <section class="section-about">
-                <div class="u-center-text u-margin-bottom-medium">
+            <section class="section-about" id="section-about">
+                <div class="u-center-text u-margin-bottom-small">
                     <h2 class="heading-secondary">
                         About Me
                     </h2>
                 </div>
-                <div class="section-about-content u-margin-bottom-big">
+                <div class="section-about-content u-margin-bottom-small">
                     <h3 class="heading-tertiary">
                     </h3>
-                    <p class="paragraph">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta commodi, soluta impedit explicabo a ratione nemo iusto amet beatae nobis molestias dignissimos tenetur in ipsam inventore consequuntur rem saepe? Temporibus.
-                    </p>
+                    <div class="section-about-paragraph">
+                        <div class="section-about-paragraph-image">
+                            <i class="far fa-keyboard"></i>
+                        </div>
+                        <p class="paragraph">
+                            I am a software engineer with a background in the medical field. I started to learn coding since March 2020 because of the challenging and exciting aspects of software development. 
+                        </p>
+                    </div>
+                    <div class="section-about-paragraph">
+                        <p class="paragraph">I graduated from an immersive coding bootcamp and have spent over 1000+ hours learning full-stack web development. I have created project using C#, Python and JavaScript. I also have experience using several popular frameworks such as Django, .Net, and Entity. </p>
+                        <div class="section-about-paragraph-image">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                    <div class="section-about-paragraph">
+                        <div class="section-about-paragraph-image">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="paragraph">I am a fast learner and able to pick up new programming languages quickly. I love how front-end development allows me to be creative while back-end development sharpens my problem solving skill.</p>
+                    </div>
+                    <div class="section-about-paragraph">
+                        <p class="paragraph">I am looking forward to be a part of your team, grow and create impactful web app together.</p>
+                        <div class="section-about-paragraph-image">
+                            <i class="far fa-handshake"></i>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
@@ -97,7 +121,7 @@
                 </div>
             </section> -->
 
-            <section class="section-project">
+            <section class="section-project" id="section-project">
                 <div class="u-center-text u-margin-bottom-medium">
                     <h2 class="heading-secondary--2">
                         Projects
@@ -126,12 +150,18 @@
                                 <div class="card__cta">
                                     <div class="card__des-box">
                                         <p class="card__des">
-                                            GitHub
+                                            * GROUP PROJECT *
                                         </p>
+                                        <p class="card__des">
+                                            Find a food bank near you and register as a volunteer
+                                        </p>
+                                        
                                     </div>
-                                    <a href="#" class="btn btn--white">GitHub</a>
-                                    <a href="#" class="btn btn--white">Website</a>
-                                    <a href="#" class="btn btn--white">Details</a>
+                                    <div class="card__des-btn">
+                                        <a href="https://github.com/taylor-johnson-codes/Food_Finder_Project/tree/master/food_finder_project" target="_blank" class="btn btn--white">GitHub</a>
+                                        <a href="#" target="_blank" class="btn btn--white">Website</a>
+                                        <a href="#popup" class="btn btn--white" >Screenshots</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -158,12 +188,14 @@
                                 <div class="card__cta">
                                     <div class="card__des-box">
                                         <p class="card__des">
-                                            GitHub
+                                            Manage all the jobs you have applied or interested in
                                         </p>
                                     </div>
-                                    <a href="#" class="btn btn--white">GitHub</a>
-                                    <a href="#" class="btn btn--white">Website</a>
-                                    <a href="#" class="btn btn--white">Details</a>
+                                    <div class="card__des-btn">
+                                        <a href="https://github.com/bevkwok/job_tracker" target="_blank" class="btn btn--white">GitHub</a>
+                                        <a href="#" target="_blank" class="btn btn--white">Website</a>
+                                        <a href="#popup" class="btn btn--white" onclick="showDiv()">Screenshots</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -190,12 +222,14 @@
                                 <div class="card__cta">
                                     <div class="card__des-box">
                                         <p class="card__des">
-                                            GitHub
+                                            A E-Commerce site with trendy clothing
                                         </p>
                                     </div>
-                                    <a href="#" class="btn btn--white">GitHub</a>
-                                    <a href="#" class="btn btn--white">Website</a>
-                                    <a href="#" class="btn btn--white">Details</a>
+                                    <div class="card__des-btn">
+                                        <a href="https://github.com/bevkwok/WannaShop" target="_blank" class="btn btn--white">GitHub</a>
+                                        <a href="#" target="_blank" class="btn btn--white">Website</a>
+                                        <a href="#popup" class="btn btn--white" onclick="showDiv()">Screenshots</a>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -203,7 +237,7 @@
                 </div>
             </section>
 
-            <section class="section-skills">
+            <section class="section-skills" id="section-skills">
                 <div class="u-center-text u-margin-bottom-medium">
                     <h2 class="heading-secondary">
                         Skills
@@ -224,19 +258,34 @@
                     <h3 class="heading-tertiary">
                         Other Technologies
                     </h3>
+                    <i class="devicon-amazonwebservices-plain-wordmark"></i>
+                    <i class="devicon-dot-net-plain-wordmark"></i>
+                    <i class="devicon-bootstrap-plain-wordmark"></i>
+                    <i class="devicon-django-plain-wordmark"></i>
+                    <i class="devicon-express-original-wordmark"></i>
+                    <i class="devicon-jquery-plain-wordmark"></i>
+                    <i class="devicon-mongodb-plain-wordmark"></i>
+                    <i class="devicon-nodejs-plain-wordmark"></i>
+                    <i class="devicon-react-original-wordmark"></i>
                 </div>
             </section>
-            <section class="section-contact-icon">
+            <section class="section-contact-icon" id="section-contact-icon">
                 <div class="u-center-text u-margin-bottom-medium">
                     <h2 class="heading-secondary--2">
                         Contact
                     </h2>
                 </div>
                 <div class="composition">
-                    <i class="composition__icon composition__icon--i3 fab fa-linkedin"></i>
-                    <i class="composition__icon composition__icon--i2 fab fa-github"></i>
+                    <a href="https://www.linkedin.com/in/yan-yee-beverly-kwok" target="_blank">
+                        <i class="composition__icon composition__icon--i3 fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/bevkwok" target="_blank">
+                        <i class="composition__icon composition__icon--i2 fab fa-github"></i>
+                    </a>
                     <i class="composition__icon composition__icon--i1 far fa-file-alt"></i>
-                    <i class="composition__icon composition__icon--i4 fas fa-envelope"></i>
+                    <a href="mailto: yan.kwok.b@gamil.com" target="_blank">
+                        <i class="composition__icon composition__icon--i4 fas fa-envelope"></i>
+                    </a>
                 </div>
             </section>
             <!-- <section class="section-contact">
@@ -273,6 +322,58 @@
                 </p>
             </section>
         </main>
+
+        <div class="popup" id="popup">
+            
+            <div class="popup__content">
+                <div class="popup__top">
+                    <div class="slider">
+                        <div class="slides">
+
+                            <input type="radio" name="radio-btn" id="radio1">
+                            <input type="radio" name="radio-btn" id="radio2">
+                            <input type="radio" name="radio-btn" id="radio3">
+                            <input type="radio" name="radio-btn" id="radio4">
+                            <input type="radio" name="radio-btn" id="radio5">
+                            <div class="slide first">
+                                <img src="img/fbf1.jpg" alt="Volunteer Page" class="popup__img">
+                            </div>
+                            <div class="slide">
+                                <img src="img/fbf2.jpg" alt="" class="popup__img">
+                            </div>
+                            <div class="slide">
+                                <img src="img/fbf3.jpg" alt="" class="popup__img">
+                            </div>
+                            <div class="slide">
+                                <img src="img/fbf4.jpg" alt="" class="popup__img">
+                            </div>
+                            <div class="slide"></div>
+                            
+                            <div class="slide-auto">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                                <div class="auto-btn3"></div>
+                                <div class="auto-btn4"></div>
+                                <div class="auto-btn5"></div>
+                            </div>
+                            <div class="slide-manual">
+                                <label for="radio1" class="manual-btn" id="radio1"></label>
+                                <label for="radio2" class="manual-btn" id="radio2"></label>
+                                <label for="radio3" class="manual-btn" id="radio3"></label>
+                                <label for="radio4" class="manual-btn" id="radio4"></label>
+                                <label for="radio5" class="manual-btn" id="radio5"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#section-project" class="popup__close">&times;</a>
+                    <!-- <div class="popup__bottom">
+                        
+                        <h3 class="heading-tertiary">Placeholder</h3>
+                    </div> -->
+            </div>
+        </div>
+        <div id="overlay"></div>
 
     <!-- 
         <section class="grid-test">
@@ -338,5 +439,7 @@
             </div>
         </section> 
     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
     </body>
 </html>
