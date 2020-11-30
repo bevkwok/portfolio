@@ -408,12 +408,12 @@ body {
   width: 900px;
   overflow: hidden; }
   .slider .slides {
-    width: 500%;
+    width: 400%;
     display: flex; }
     .slider .slides input {
       display: none; }
     .slider .slides .slide {
-      width: 20%;
+      width: 25%;
       transition: .8s; }
       .slider .slides .slide img {
         width: 900px; }
@@ -425,15 +425,16 @@ body {
       display: flex;
       justify-content: center; }
       .slider .slides .slide-manual .manual-btn {
-        border: 3px solid whitesmoke;
+        border: 3px solid #112d4e;
         padding: 0.5rem;
         border-radius: 10px;
         cursor: pointer;
-        transition: 0.9s; }
+        transition: 0.9s;
+        box-shadow: 1px 1px 6px #888888; }
         .slider .slides .slide-manual .manual-btn:not(:last-child) {
           margin-right: 3rem; }
         .slider .slides .slide-manual .manual-btn:hover, .slider .slides .slide-manual .manual-btn:checked {
-          background-color: whitesmoke; }
+          background-color: #112d4e; }
     .slider .slides .slide-auto {
       z-index: 6000;
       position: absolute;
@@ -454,31 +455,49 @@ body {
   margin-left: 0; }
 
 #radio2:checked ~ .first {
-  margin-left: -20%; }
+  margin-left: -25%; }
 
 #radio3:checked ~ .first {
-  margin-left: -40%; }
+  margin-left: -50%; }
 
 #radio4:checked ~ .first {
-  margin-left: -60%; }
+  margin-left: -75%; }
 
 #radio5:checked ~ .first {
-  margin-left: -80%; }
+  margin-left: 0; }
+
+#radio6:checked ~ .first {
+  margin-left: -25%; }
+
+#radio7:checked ~ .first {
+  margin-left: -50%; }
+
+#radio8:checked ~ .first {
+  margin-left: -75%; }
 
 #radio1:checked ~ .slide-auto .auto-btn1 {
-  background: whitesmoke; }
+  background: #112d4e; }
 
 #radio2:checked ~ .slide-auto .auto-btn2 {
-  background: whitesmoke; }
+  background: #112d4e; }
 
 #radio3:checked ~ .slide-auto .auto-btn3 {
-  background: whitesmoke; }
+  background: #112d4e; }
 
 #radio4:checked ~ .slide-auto .auto-btn4 {
-  background: whitesmoke; }
+  background: #112d4e; }
 
 #radio5:checked ~ .slide-auto .auto-btn5 {
-  background: whitesmoke; }
+  background: #112d4e; }
+
+#radio6:checked ~ .slide-auto .auto-btn6 {
+  background: #112d4e; }
+
+#radio7:checked ~ .slide-auto .auto-btn7 {
+  background: #112d4e; }
+
+#radio8:checked ~ .slide-auto .auto-btn8 {
+  background: #112d4e; }
 
 .section-about-content {
   padding: 0rem 2rem; }
