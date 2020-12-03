@@ -232,7 +232,7 @@ body {
     .card__picture--2 {
       background-image: url(../img/uapplied.png); }
     .card__picture--3 {
-      background-image: url(../img/foodbank.png); }
+      background-image: url(../img/wannashop.jpg); }
   .card__heading {
     font-size: 2.5rem;
     font-weight: 200;
@@ -475,6 +475,18 @@ body {
 #radio8:checked ~ .first {
   margin-left: -75%; }
 
+#radio9:checked ~ .first {
+  margin-left: 0%; }
+
+#radio10:checked ~ .first {
+  margin-left: -25%; }
+
+#radio11:checked ~ .first {
+  margin-left: -50%; }
+
+#radio12:checked ~ .first {
+  margin-left: -75%; }
+
 #radio1:checked ~ .slide-auto .auto-btn1 {
   background: #112d4e; }
 
@@ -497,6 +509,18 @@ body {
   background: #112d4e; }
 
 #radio8:checked ~ .slide-auto .auto-btn8 {
+  background: #112d4e; }
+
+#radio9:checked ~ .slide-auto .auto-btn9 {
+  background: #112d4e; }
+
+#radio10:checked ~ .slide-auto .auto-btn10 {
+  background: #112d4e; }
+
+#radio11:checked ~ .slide-auto .auto-btn11 {
+  background: #112d4e; }
+
+#radio12:checked ~ .slide-auto .auto-btn12 {
   background: #112d4e; }
 
 .section-about-content {
