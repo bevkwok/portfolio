@@ -1,4 +1,24 @@
 /*
+600px: phone
+600-900px: tablet portriat
+900-1200px: tablet landscape
+1200-1800: normal style apply
+1800px+: big desktop
+*/
+/*
+$breakpoint option
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+start with px unit but need to change to other unit
+in case user have a default font size for their bowser
+best to use em unit, some bowser can't do rem
+1em = 16px
+
+*/
+/*
 COLORS:
 
 dark blue: #112d4e
@@ -33,7 +53,21 @@ light grey: #f9f7f7
 
 html {
   font-size: 62.5%;
-  /* using % instead of px so user can change it */ }
+  /* 
+    using % instead of px so user can change it 
+    since the whole website uses rem unit
+    and rem is heavily depending on font-size
+    changing font-size makes responsive design very easy
+    */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   padding: 0px 2.5rem;

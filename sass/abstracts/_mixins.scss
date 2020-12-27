@@ -12,3 +12,48 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// Media query 
+/*
+600px: phone
+600-900px: tablet portriat
+900-1200px: tablet landscape
+1200-1800: normal style apply
+1800px+: big desktop
+*/
+
+@mixin respond-phone {
+    @media (max-width: 600px) { @content };
+}
+
+/*
+$breakpoint option
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+start with px unit but need to change to other unit
+in case user have a default font size for their bowser
+best to use em unit, some bowser can't do rem
+1em = 16px
+
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }; //600px
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content }; //900px
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content }; //1200px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content }; //1800px
+    }
+}
