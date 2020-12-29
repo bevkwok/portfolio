@@ -1,6 +1,4 @@
-* {
-    // border: 1px solid red;
-}
+
 
 .section-about-content {
     padding: 0rem 2rem;
@@ -14,5 +12,10 @@
         font-size: 6rem;
         color: $color-primary-dark;
         padding: 2rem;
+
+        @include respond(phone) {
+            padding: 1rem;
+            font-size: 4rem;
+        }
     }
 }

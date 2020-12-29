@@ -41,6 +41,10 @@ best to use em unit, some bowser can't do rem
 */
 
 @mixin respond($breakpoint) {
+    @if $breakpoint == sml-phone {
+        @media (max-width: 25em) { @content }; //400px / 16px
+    }
+
     @if $breakpoint == phone {
         @media (max-width: 37.5em) { @content }; //600px
     }
