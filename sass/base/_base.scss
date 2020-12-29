@@ -48,4 +48,11 @@ body{
     box-sizing: border-box;  
     /* so the padding and border nolong added to the total height or width of the box */
     /* border: solid red 1px; */
+
+
+    @include respond(tab-port) { // width < 900
+        // want to make 1rem = 8px
+        // 8px/16px = 50%
+        padding: 0;
+    }
 } 

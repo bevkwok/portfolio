@@ -6,6 +6,20 @@
     -webkit-clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
     clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
 
+    @include respond(tab-port) {
+        -webkit-clip-path: polygon(50% 0%, 100% 7%, 100% 93%,  50% 100%, 0% 93%, 0% 7%);
+        clip-path: polygon(50% 0%, 100% 7%, 100% 93%,  50% 100%, 0% 93%, 0% 7%);
+
+        padding: 13rem 2rem;
+    }
+
+    @include respond(sml-phone) {
+        -webkit-clip-path: polygon(50% 0%, 100% 3%, 100% 97%,  50% 100%, 0% 97%, 0% 3%);
+        clip-path: polygon(50% 0%, 100% 3%, 100% 97%,  50% 100%, 0% 97%, 0% 3%);
+
+        padding: 7rem 0.1rem;
+    }
+
     // clip-path: polygon(0 0, 50% 8%, 100% 0, 100% 100%, 50% 88%, 0 100%);
 }
 
@@ -29,6 +43,19 @@
     margin-top: -12vh;
     -webkit-clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
     clip-path: polygon(50% 0%, 100% 12%, 100% 88%,  50% 100%, 0% 88%, 0% 12%);
+
+    @include respond(tab-port) {
+        -webkit-clip-path: polygon(50% 0%, 100% 5%, 100% 95%,  50% 100%, 0% 95%, 0% 5%);
+        clip-path: polygon(50% 0%, 100% 5%, 100% 95%,  50% 100%, 0% 95%, 0% 5%);
+        padding: 13rem 3rem 18rem 3rem;
+    }
+
+    @include respond(sml-phone) {
+        margin-top: -5vh;
+        -webkit-clip-path: polygon(50% 0%, 100% 2%, 100% 98%,  50% 100%, 0% 98%, 0% 2%);
+        clip-path: polygon(50% 0%, 100% 2%, 100% 98%,  50% 100%, 0% 98%, 0% 2%);
+        padding: 9rem 3rem 12rem 3rem;
+    }
 }
 
 .section-contact-icon {
@@ -37,6 +64,10 @@
     margin-top: -5vh;
     -webkit-clip-path: polygon(50% 0%, 100% 12%, 100% 100%, 0 100%, 0 12%);
     clip-path: polygon(50% 0%, 100% 12%, 100% 100%, 0 100%, 0 12%);
+
+    @include respond(phone) {
+        padding: 6rem 4rem;
+    }
 }
 
 .section-copyright {
