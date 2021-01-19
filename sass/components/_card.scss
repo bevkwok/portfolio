@@ -129,5 +129,59 @@
     &__des {
         font-size: 1.8rem;
     }
-}
 
+    @include respond(tab-port) {
+
+        height: auto;
+
+        &__side {
+            // background-image: linear-gradient($color-primary-light, $color-white);
+            height: auto;
+            position: relative;
+            border-radius: 2px;
+
+
+            &--back {
+                // background-image: linear-gradient($color-black, $color-primary-dark);
+                background-color: $color-primary-dark;
+                transform: rotateY(0);
+            }
+        }
+
+        &:hover &__side--front { //.card:hover .card__side--front 
+            transform: rotateY(0);
+        }
+
+        &:hover &__side--back { //.card:hover .card__side--back
+            transform: rotateY(0);
+        }
+
+        //FRONT SIDE
+
+        &__cta {
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: translate(0);
+            width: 100%;
+            padding: 1.5rem;
+        }
+
+        &__des-box {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        &__des-btn {
+            padding: 0rem 3rem;
+
+            a {
+                border-radius: 2px;
+            }
+        }
+
+        &__des {
+            font-size: 1.8rem;
+        }
+    }
+}
